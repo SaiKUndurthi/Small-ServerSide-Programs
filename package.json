@@ -1,0 +1,22 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Hello World",
+  "main": "HelloWorld.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaiKUndurthi/Small-ServerSide-Programs.git"
+  },
+  "author": "Sai Krishna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaiKUndurthi/Small-ServerSide-Programs/issues"
+  },
+  "homepage": "https://github.com/SaiKUndurthi/Small-ServerSide-Programs#readme",
+  "devDependencies": {
+    "eslint": "^4.11.0"
+  }
+}
