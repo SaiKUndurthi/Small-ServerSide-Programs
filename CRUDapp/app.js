@@ -1,8 +1,26 @@
 const express = require('express');
 const path  = require('path');
+const mongoose = require('mongoose');
+
+//Connecting MongoDB using mongoose
+mongoose.connect('mongodb://localhost/knowledge_base_app');
+let db = mongoose.connection;
+
+//Check for Db connection
+db.once('open', ()=>{
+  console.log('Connected to MongoDB');
+})
+
+//Check for Db errors
+db.on('error', (err) => {
+  console.log(err);
+});
+
 //Init app
 const app = express();
 
+//Bring in the model.
+let Article = require('./models/article');
 
 const PORT = 3000;
 // Load View Engine
@@ -12,7 +30,17 @@ app.set('view engine', 'pug');
 
 //Home Route
 app.get('/', (req,res)=>{
-  let articles = [
+Article.find({}, (err, articles)=>{
+  if(err){
+    console.log(err);
+  }else{
+    res.render("index", {
+      title:'ARTICLES',
+      articles: articles,
+    });
+  }
+});
+  /*let articles = [
     {
       id:1,
       title: 'First Article',
@@ -28,11 +56,8 @@ app.get('/', (req,res)=>{
       title: 'Third Article',
       author: 'Sai Krishna Undurthi'
     }
-];
-  res.render("index", {
-    title:'ARTICLES',
-    articles: articles
-  });
+];*/
+
 });
 
 //Add Article Route
