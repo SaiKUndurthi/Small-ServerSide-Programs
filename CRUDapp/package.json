@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4",
+    "eslint": "^4.11.0"
   }
 }
