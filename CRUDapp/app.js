@@ -1,5 +1,6 @@
 const express = require('express');
 const path  = require('path');
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 //Connecting MongoDB using mongoose
@@ -27,6 +28,11 @@ const PORT = 3000;
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+//Body parser Middleware
+//parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({extended:false}))
+//parse application/json
+app.use(bodyParser.json())
 
 //Home Route
 app.get('/', (req,res)=>{
@@ -66,6 +72,22 @@ app.get('/articles/add', (req, res)=>{
     title:'Add Article'
   });
 });
+
+//Add Articles POST
+app.post('/articles/add', (req, res)=>{
+  let article = new Article();
+  article.title = req.body.title;
+  article.author = req.body.author;
+  article.body = req.body.body;
+  article.save((err)=>{
+    if(err){
+      console.log(err);
+      return;
+    }else{
+      res.redirect('/');
+    }
+  })
+})
 
 app.listen(PORT, ()=>{
   console.log("Server started on PORT ", PORT);
