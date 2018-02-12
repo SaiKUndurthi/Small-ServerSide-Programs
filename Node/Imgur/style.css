@@ -1,0 +1,34 @@
+    .box{
+        display: block;
+    }
+    #one{
+        background-color:yellow;
+        width: 500px;
+        height: 400px;
+        text-align: center;
+        margin: 10px auto;
+        border: 5px dash;
+        border-color: violet;
+    }
+
+    #two{
+        width: 250px;
+        height: 200px;
+        text-align: center;
+        margin: 10px auto;
+        border: 5px groove;
+        border-color: black;
+    }
+
+    #three{
+        width: 125px;
+        height: 100px;
+        margin: 10px auto;
+        text-align: center;
+        border: 5px groove;
+        border-color: red;
+    }
+
+    img{
+        border-radius: 50%;
+    }
