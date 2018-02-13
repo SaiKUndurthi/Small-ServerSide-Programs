@@ -8,8 +8,8 @@ const request = new Request('https://api.imgur.com/3/gallery/image/pmMAAr6', {
     function createImageElement(data) {
         var pT = document.createElement('IMG');
           pT.setAttribute('src', data);
-          pT.setAttribute('width', '80');
-          pT.setAttribute('height', '80');
+          pT.setAttribute('width', '150');
+          pT.setAttribute('height', '150');
 
         document.getElementById("three").appendChild(pT);
       }
