@@ -1,9 +1,24 @@
 var clientID = key.CLIENT_ID;
-const request = new Request('https://api.imgur.com/3/gallery/image/pmMAAr6', {
+var imgur_request = new Request('https://api.imgur.com/3/gallery/image/pmMAAr6', {
         headers: new Headers({
             'Authorization': 'Client-ID '+clientID
         })
     });
+
+var github_request = new Request('https://api.github.com/users/SaiKUndurthi', {
+    headers: new Headers({
+        'Accept': 'application/vnd.github.v3+json'
+    })
+});
+
+fetch(github_request).then((data) => {
+    //console.log(data.json());
+    return data.json();
+}).then((star)=>{
+    console.log(star);
+}).catch((err)=>{
+  console.error(err);  
+})
 
     function createImageElement(data) {
         var pT = document.createElement('IMG');
@@ -22,6 +37,7 @@ const request = new Request('https://api.imgur.com/3/gallery/image/pmMAAr6', {
         e.stopPropagation();
     })
 
+
     document.getElementById('two').addEventListener('click', function(e){
         alert('Div 2');
         fetch('')
@@ -30,7 +46,7 @@ const request = new Request('https://api.imgur.com/3/gallery/image/pmMAAr6', {
 
     document.getElementById('three').addEventListener('click', function(e){
         alert('Fetching a picture using IMGUR API');
-        fetch(request).then(function(res){
+        fetch(imgur_request).then(function(res){
             //console.log(res);
            return res.json();
         }).then(function(src){
