@@ -15,7 +15,14 @@ fetch(github_request).then((data) => {
     //console.log(data.json());
     return data.json();
 }).then((star)=>{
+    var sequence = Promise.resolve();
     console.log(star);
+    for(var i in star){
+        //sequence = sequence.then((i)=>{
+            console.log(i);
+       // })
+    }
+
 }).catch((err)=>{
   console.error(err);  
 })

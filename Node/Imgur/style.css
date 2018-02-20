@@ -1,6 +1,25 @@
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
+html{
+    background-color: #fff;
+    color: #555;
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+header{
+    background-image: linear-gradient(rgba(2, 0, 0, 0.53), rgba(2, 0, 0, 0.53)), url(london.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;    
+}
+
 .box{
     display: block;
 }        
@@ -9,11 +28,12 @@
     text-align: center;
     margin: 10px auto;
 }
+
 #one{
     background-color:yellow;
     width: 1100px;
     height: 700px;
-    border: 5px dash;
+    border: 5px groove;
     border-color: violet;
 }
 
@@ -40,4 +60,108 @@ img{
     top: 30px;
     right: 65px;
     border-radius: 50%;
+}
+
+.row{
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.main-nav{
+    list-style: none;
+    margin-top: 55px;
+    float: right;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+    text-decoration: none;
+}
+
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid yellow;
+}
+
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+}
+
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited{
+    background-color: yellow;
+    border: 1px solid yellow;
+    color:#7b5b5b;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    color:yellow;
+    border: 1px solid yellow;
+}
+
+.btn:hover,
+.btn:active{
+    background-color: yellow; 
+}
+
+.btn-full:hover,
+.btn-full:active{
+    border: 1px solid #346f63;
+}
+
+.btn-ghost:hover,
+.btn-ghpst:active{
+    border: 1px solid #346f63;
+    color: #7b5b5b;
+}
+
+.bt:link,
+.bt:visited{
+    font-weight: 100;
+    border-radius: 200px;
+    text-decoration: none;
+    margin-left: 15px;    
+}
+
+.bt-exp:link,
+.bt-exp:visited{
+    border: 1px solid yellow;
+    padding: 10px 30px;
+    color: yellow;
+    
+    transition: background border-color 0.2s;
+}
+
+.bt-exp:hover,
+.bt-exp:active{
+    background: orange;
+    border-color: aqua;
 }

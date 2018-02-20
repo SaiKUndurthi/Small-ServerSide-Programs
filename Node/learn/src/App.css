@@ -1,0 +1,139 @@
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+    margin-top: 20px;
+    margin-left: 15px;
+  height: 80px;
+}
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url(resources/img/1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+}
+
+.text-box{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 1140px;
+    color: #fff;
+    font-weight: 100;
+    transform: translate(-50%,-50%);
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.btn:link,
+.btn:visited{
+    border-radius: 200px;
+    border: 1px solid #ffd652;
+    padding: 10px 30px;
+    margin-top: 15px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn:active,
+.btn:hover{
+    background-color: #ffc60e;
+}
+
+.btn-full:link,
+.btn-full:visited{
+    display: inline-block;
+    background-color: #ffd652;
+    transition: background-color 0.2s;
+    color: #fff;
+}
+
+.btn-full:active,
+.btn-full:hover{
+    background-color: #ffc60e;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    display: inline-block;
+    color: #fff;
+    transition: background-color 0.2s;
+}
+
+.btn-ghost:active,
+.btn-ghost:hover{
+    background-color: #ffc60e;
+}
+
+.three-state-button{
+    display:flex;
+    height: 30vh;
+    flex-direction: column;
+    color: #2d3436;
+    align-items: center;
+}
+
+.av{
+    display: block;
+}
+
+.av:after{
+    display: block;
+    height: 2px;    
+    content: " ";
+    background-color: #2d3436;
+    margin: 5px;
+}
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.avatar{
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+.popular-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+.popular-item{
+  list-style: none;
+  text-align: center;
+}
+
+.popular-rank{
+  margin-top: 5px;
+  padding: 10px 50px;
+  font-size: 30px;
+}
+
+.space-list-items{
+  list-style: none;
+
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
